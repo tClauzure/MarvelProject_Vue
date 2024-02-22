@@ -7,9 +7,9 @@ import '../assets/style/base.css'
       <img src="../assets/pictures/logo.png" alt="logo" />
     </RouterLink>
     <nav class="nav">
-      <div>Personnages</div>
-      <div>Comics</div>
-      <div>Séries</div>
+      <RouterLink to="/characters">Personnages</RouterLink>
+      <RouterLink to="/comics">Comics</RouterLink>
+      <RouterLink to="/series">Séries</RouterLink>
       <RouterLink to="/about">About</RouterLink>
       <div class="connection"></div>
     </nav>
