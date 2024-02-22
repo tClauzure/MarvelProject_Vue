@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import '../assets/style/base.css';
+import '../assets/style/base.css'
 </script>
 <template>
-  <div class="headerContainer">
+  <header class="headerContainer">
     <RouterLink class="logo" to="/">
       <img src="../assets/pictures/logo.png" alt="logo" />
     </RouterLink>
@@ -13,7 +13,7 @@ import '../assets/style/base.css';
       <RouterLink to="/about">About</RouterLink>
       <div class="connection"></div>
     </nav>
-  </div>
+  </header>
 </template>
 
 <style>

@@ -1,12 +1,15 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
   font-weight: normal;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 main {
   padding: 2rem;
+  height: 100%;
 }
 a,
 .green {
@@ -23,5 +26,4 @@ a,
 }
 
 @media (min-width: 1024px) {
- 
 }
