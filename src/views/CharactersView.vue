@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { ref, onMounted } from 'vue'
-import { marvelAPI } from '../helpers/MarvelApi'
+import { marvelAPI } from '@/helpers/MarvelApi'
 import CharacterItem from '@/components/AppCharacterItem.vue'
 import type { Character } from '@/types/CharacterType'
 
