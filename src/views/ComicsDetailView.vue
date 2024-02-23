@@ -15,6 +15,7 @@
         </div>
       </div>
     </div>
+    <p>Description des évenements:</p>
     <p class="comicsDetail__description">{{ comicsDetail.description }}</p>
     <h2>On peut retrouver ces personnages dans le comics:</h2>
     <div class="characters">
@@ -109,6 +110,10 @@ export default defineComponent({
   margin-bottom: 15px;
   text-align: center;
   font-size: 25px;
+
+  &__description {
+    text-align: start;
+  }
   &__picture {
     width: 350px;
     margin-bottom: 40px;
