@@ -1,8 +1,8 @@
 import axios from 'axios'
 import md5 from 'md5'
-import { Character, CharacterDetails } from '../types/CharacterType'
-import { Comics, ComicsDetails, Creators } from '../types/ComicsType'
-import { Series, SeriesDetails } from '../types/SeriesType'
+import type { Character, CharacterDetails } from '../types/CharacterType'
+import type { Comics, ComicsDetails, Creators } from '../types/ComicsType'
+import type { Series, SeriesDetails } from '../types/SeriesType'
 
 class MarvelAPI {
   private publicKey: string
