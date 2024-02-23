@@ -3,7 +3,11 @@ import '../assets/style/base.css'
 </script>
 
 <template>
-  <footer class="footerContainer">Nous contacter</footer>
+  <footer class="footerContainer">
+    <RouterLink to="/about">
+      Nous contacter
+    </RouterLink>
+    </footer>
 </template>
 
 <style>

@@ -10,7 +10,6 @@ import '../assets/style/base.css'
       <RouterLink to="/characters">Personnages</RouterLink>
       <RouterLink to="/comics">Comics</RouterLink>
       <RouterLink to="/series">Séries</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
       <div class="connection"></div>
     </nav>
   </header>
