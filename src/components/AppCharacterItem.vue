@@ -34,11 +34,11 @@ export default {
 
 <style scoped lang="scss">
 .cell {
-    text-decoration: none;
-    color: var(--black);
-    &__name {
-        font-size: 25px;
-        max-width: 216px;
-    }
+  text-decoration: none;
+  color: var(--black);
+  &__name {
+    font-size: 25px;
+    max-width: 216px;
+  }
 }
 </style>

@@ -1,12 +1,18 @@
 <template>
-<div className='homeContainer'>
-      <h1>Bienvenue sur le Projet Marvel</h1>
-      <div className='homeContainer__pictures'>
-        <RouterLink to="/characters" className='homeContainer__pictures__pic'><img src="../assets/pictures/picture_charac.jpg" alt="charac" /></RouterLink>
-        <RouterLink to="/series" className='homeContainer__pictures__pic'><img src="../assets/pictures/picture_series.jpg" alt="series" /></RouterLink>
-        <RouterLink to="/comics" className='homeContainer__pictures__pic'><img src="../assets/pictures/picture_comics.jpg" alt="comics" /></RouterLink>
-      </div>
+  <div className="homeContainer">
+    <h1>Bienvenue sur le Projet Marvel</h1>
+    <div className="homeContainer__pictures">
+      <RouterLink to="/characters" className="homeContainer__pictures__pic"
+        ><img src="../assets/pictures/picture_charac.jpg" alt="charac"
+      /></RouterLink>
+      <RouterLink to="/series" className="homeContainer__pictures__pic"
+        ><img src="../assets/pictures/picture_series.jpg" alt="series"
+      /></RouterLink>
+      <RouterLink to="/comics" className="homeContainer__pictures__pic"
+        ><img src="../assets/pictures/picture_comics.jpg" alt="comics"
+      /></RouterLink>
     </div>
+  </div>
 </template>
 
 <script setup lang="ts">

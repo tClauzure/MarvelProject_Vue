@@ -49,19 +49,19 @@ export default {
 
 <style scoped lang="scss">
 .characterContainer {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    h2 {
-        font-size: 35px;
-        line-height: 40px;
-        margin-bottom: 15px;
-        padding-left: 10px;
-    }
-    .list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }  
+  margin-top: 20px;
+  margin-bottom: 20px;
+  h2 {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
 }
 </style>
