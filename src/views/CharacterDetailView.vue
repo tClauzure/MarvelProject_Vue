@@ -45,6 +45,7 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import '../assets/style/base.css'
 import type { CharacterDetails } from '@/types/CharacterType'
 import type { Comics } from '@/types/ComicsType'
 import type { Series } from '@/types/SeriesType'
@@ -106,7 +107,7 @@ export default defineComponent({
     img {
       width: 100%;
       height: auto;
-      border: 4px solid black;
+      border: 4px solid var(--black);
     }
   }
   .description {
@@ -132,7 +133,7 @@ export default defineComponent({
     .comic {
       width: 150px;
       text-decoration: none;
-      color: black;
+      color: var(--black);
       &__thumbnail {
         margin-bottom: 10px;
         img {
@@ -154,7 +155,7 @@ export default defineComponent({
     .serie {
       width: 170px;
       text-decoration: none;
-      color: black;
+      color: var(--black);
       &__thumbnail {
         margin-bottom: 10px;
         img {
