@@ -4,10 +4,8 @@ import '../assets/style/base.css'
 
 <template>
   <footer class="footerContainer">
-    <RouterLink to="/about">
-      Nous contacter
-    </RouterLink>
-    </footer>
+    <RouterLink to="/about"> Nous contacter </RouterLink>
+  </footer>
 </template>
 
 <style>

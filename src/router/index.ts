@@ -34,8 +34,8 @@ const router = createRouter({
       component: () => import('../views/SeriesView.vue')
     },
     {
-      path:'/:catchAll(.*)',
-      name:'pageNotFound',
+      path: '/:catchAll(.*)',
+      name: 'pageNotFound',
       component: PageNotFound
     }
   ]
