@@ -1,28 +1,28 @@
 <template>
-  <RouterLink :to="`/characters/${character.id}`" :key="character.id" class="cell">
+  <RouterLink :to="`/comics/${comics.id}`" :key="comics.id" class="cell">
     <div class="cell__picture">
-      <img :src="thumbnailUrl" alt="Character Thumbnail" />
+      <img :src="thumbnailUrl" alt="Thumbnail" />
     </div>
-    <div class="cell__name">{{ character.name }}</div>
+    <div class="cell__name">{{ comics.title }}</div>
   </RouterLink>
 </template>
 
 <script lang="ts">
 import '../assets/style/base.css'
 import { computed } from 'vue'
-import type { Character } from '@/types/CharacterType'
+import type { Comics } from '@/types/ComicsType'
 import { getThumbnail } from '@/helpers/AppGetThumbnail'
 
 export default {
   props: {
-    character: {
-      type: Object as () => Character,
+    comics: {
+      type: Object as () => Comics,
       required: true
     }
   },
   setup(props) {
     const thumbnailUrl = computed(() => {
-      return getThumbnail(props.character.thumbnail.path, 'incredible')
+      return getThumbnail(props.comics.thumbnail.path, 'incredible')
     })
 
     return {
