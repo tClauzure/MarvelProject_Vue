@@ -129,6 +129,7 @@ export default defineComponent({
     flex-wrap: wrap;
     font-size: 25px;
     line-height: 35px;
+    margin-bottom: 15px;
     .creators-list {
       display: flex;
       flex-wrap: wrap;
