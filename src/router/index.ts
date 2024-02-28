@@ -44,6 +44,11 @@ const router = createRouter({
       component: () => import('../views/SeriesView.vue')
     },
     {
+      path: '/series/:serieId',
+      name: 'serieDetails',
+      component: () => import('../views/SerieDetailView.vue')
+    },
+    {
       path: '/:catchAll(.*)',
       name: 'pageNotFound',
       component: PageNotFound
