@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { marvelAPI } from '@/helpers/MarvelApi'
 import CharacterItem from '@/components/AppCharacterItem.vue'
 import type { Character } from '@/types/CharacterType'
@@ -27,10 +27,22 @@ import type { Character } from '@/types/CharacterType'
 export default {
   components: {
     CharacterItem
+    SearchBar
   },
   setup() {
     const characterState = ref<Character[]>([])
     const loading = ref(true)
+    const searchTerm = ref('')
+    const getCharactersSearch = (name: string): Character[] => {
+      return characterState.value.filter(character => {
+        return character.name.toLowerCase().includes(name.toLowerCase())
+      })
+    }
+    const handleSearch = (searchQuery: string) => {
+      searchTerm.value = searchQuery
+    }
+
+    const filteredCharacters = ref<Character[]>([])
 
     onMounted(async () => {
       try {
@@ -41,8 +53,11 @@ export default {
         console.error('Erreur lors de la récupération des personnages :', error)
       }
     })
-
-    return { characterState, loading }
+    
+    watch(searchTerm, () => {
+      filteredCharacters.value = getCharactersSearch(searchTerm.value)
+    })
+    return { characterState, loading, handleSearch, filteredCharacters }
   }
 }
 </script>

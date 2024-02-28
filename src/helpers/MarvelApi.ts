@@ -44,6 +44,28 @@ class MarvelAPI {
     }
   }
 
+  async getCharactersSearch(name: string): Promise<Character[]> {
+    const timestamp = new Date().getTime().toString()
+    const hash = this.generateHash(timestamp)
+
+    try {
+      const response = await axios.get(`${this.baseUrl}/characters?name=${name}`, {
+        params: {
+          ts: timestamp,
+          apikey: this.publicKey,
+          hash: hash
+        }
+      })
+
+      // Récupérer les personnages depuis la réponse
+      const characters: Character[] = response.data.data.results
+      return characters
+    } catch (error) {
+      console.error('Erreur lors de la récupération du personnages :', error)
+      throw error
+    }
+  }
+
   async getCharacter(id: string): Promise<CharacterDetails> {
     const timestamp = new Date().getTime().toString()
     const hash = this.generateHash(timestamp)

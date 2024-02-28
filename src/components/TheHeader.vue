@@ -1,11 +1,30 @@
-<script setup lang="ts">
+<script lang="ts">
 import '../assets/style/base.css'
+import { defineComponent } from 'vue';
+import SearchBar from './TheSearchBar.vue';
+
+export default defineComponent({
+  name: 'App',
+  components: {
+    SearchBar
+  },
+  methods: {
+    handleSearch(searchQuery: string) {
+      console.log('Recherche en cours :', searchQuery);
+      // Implémentez la logique de recherche ici
+    }
+  }
+});
+
 </script>
 <template>
   <header class="headerContainer">
     <RouterLink class="logo" to="/">
       <img src="../assets/pictures/logo.png" alt="logo" />
     </RouterLink>
+    <div>
+    <SearchBar :onSearch="handleSearch" />
+    </div>
     <nav class="nav">
       <RouterLink to="/characters">Personnages</RouterLink>
       <RouterLink to="/comics">Comics</RouterLink>
