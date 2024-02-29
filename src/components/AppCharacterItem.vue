@@ -36,6 +36,8 @@ export default {
 .cell {
   text-decoration: none;
   color: var(--black);
+  border-radius: 5px;
+  text-align: center;
   &__name {
     font-size: 25px;
     max-width: 216px;

@@ -134,6 +134,8 @@ export default defineComponent({
       width: 150px;
       text-decoration: none;
       color: var(--black);
+      border-radius: 5px;
+      text-align: center;
       &__thumbnail {
         margin-bottom: 10px;
         img {

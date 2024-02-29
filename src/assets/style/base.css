@@ -8,6 +8,7 @@
   --black-mute: #282828;
 
   --blue: #5772b8;
+  --blue-mute: #c6c9e6;
   --header-background-color-hover: #424141;
   --footer-background-color-hover: #b050c5;
 }
@@ -118,6 +119,7 @@ section {
 body {
   line-height: 1;
   height: 100vh;
+  background-color: var(--blue-mute);
 }
 
 ol,
