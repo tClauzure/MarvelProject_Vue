@@ -31,6 +31,8 @@ export default defineComponent({
 .cell {
   text-decoration: none;
   color: black;
+  border-radius: 5px;
+  text-align: center;
   &__name {
     font-size: 25px;
     max-width: 216px;

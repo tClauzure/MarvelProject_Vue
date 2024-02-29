@@ -19,7 +19,7 @@
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue'
 import { marvelAPI } from '@/helpers/MarvelApi'
-import { Series } from '@/types/SeriesType'
+import  type { Series } from '@/types/SeriesType'
 import SeriesItem from '@/components/AppSeriesItem.vue'
 
 export default defineComponent({
