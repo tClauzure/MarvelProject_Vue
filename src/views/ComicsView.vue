@@ -64,7 +64,7 @@ export default defineComponent({
     font-size: 35px;
     line-height: 40px;
     margin-bottom: 15px;
-    padding-left: 10px;
+    padding-left: 95px;
   }
   .list {
     display: flex;
