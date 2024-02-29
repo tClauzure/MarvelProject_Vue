@@ -19,30 +19,26 @@
 </template>
 
 <script lang="ts">
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watchEffect} from 'vue'
 import { marvelAPI } from '@/helpers/MarvelApi'
 import CharacterItem from '@/components/AppCharacterItem.vue'
 import type { Character } from '@/types/CharacterType'
+import { useSearchStore } from '@/stores/search'
 
 export default {
   components: {
-    CharacterItem
-    SearchBar
+    CharacterItem,
   },
   setup() {
     const characterState = ref<Character[]>([])
     const loading = ref(true)
-    const searchTerm = ref('')
-    const getCharactersSearch = (name: string): Character[] => {
-      return characterState.value.filter(character => {
-        return character.name.toLowerCase().includes(name.toLowerCase())
-      })
-    }
-    const handleSearch = (searchQuery: string) => {
-      searchTerm.value = searchQuery
-    }
+    const searchQuery = ref('')
+    const {charac} = useSearchStore()
+    watchEffect(() => {
+      searchQuery.value = charac
+      console.log(searchQuery.value)
+    })
 
-    const filteredCharacters = ref<Character[]>([])
 
     onMounted(async () => {
       try {
@@ -54,10 +50,7 @@ export default {
       }
     })
     
-    watch(searchTerm, () => {
-      filteredCharacters.value = getCharactersSearch(searchTerm.value)
-    })
-    return { characterState, loading, handleSearch, filteredCharacters }
+    return { characterState, loading, searchQuery  }
   }
 }
 </script>

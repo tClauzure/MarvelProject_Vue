@@ -1,18 +1,20 @@
 <script lang="ts">
 import '../assets/style/base.css'
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import SearchBar from './TheSearchBar.vue';
 
 export default defineComponent({
-  name: 'App',
   components: {
     SearchBar
   },
-  methods: {
-    handleSearch(searchQuery: string) {
-      console.log('Recherche en cours :', searchQuery);
-      // Implémentez la logique de recherche ici
+  setup() {
+    const searchTerm = ref('')
+
+    const handleSearch = (searchQuery: string) => {
+      searchTerm.value = searchQuery
     }
+
+    return { handleSearch }
   }
 });
 
